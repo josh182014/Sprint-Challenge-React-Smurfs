@@ -30,7 +30,6 @@ class App extends Component {
   }
 
   addSmurf = (props) => {
-    console.log(props)
     Axios
     .post(`http://localhost:3333/smurfs`, props)
     .then(res => {
@@ -41,7 +40,6 @@ class App extends Component {
   }
 
   deleteSmurf = (props) => {
-    console.log(props)
     Axios
     .delete(`http://localhost:3333/smurfs/${props}`)
     .then(res => {
