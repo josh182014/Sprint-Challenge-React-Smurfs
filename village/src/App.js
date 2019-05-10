@@ -22,7 +22,6 @@ class App extends Component {
     Axios 
       .get('http://localhost:3333/smurfs')
       .then(res => {
-        console.log('server response', res)
         this.setState({ smurfs: res.data });
       })
       .catch(err => {
@@ -32,7 +31,8 @@ class App extends Component {
 
   addSmurf = (props) => {
     console.log(props)
-    Axios .post(`http://localhost:3333/smurfs`, props)
+    Axios
+    .post(`http://localhost:3333/smurfs`, props)
     .then(res => {
       console.log(res)
       this.setState({ smurfs: res.data })
@@ -41,7 +41,6 @@ class App extends Component {
   }
 
   render() {
-    // console.log(this.state.smurfs)
     return (
       <div className="App">
         <Navigation />
