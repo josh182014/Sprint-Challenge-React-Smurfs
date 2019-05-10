@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
+import Navigation from './components/Navigation';
 import Axios from 'axios';
 import { Route } from 'react-router-dom';
 
@@ -43,6 +44,7 @@ class App extends Component {
     // console.log(this.state.smurfs)
     return (
       <div className="App">
+        <Navigation />
         <Route exact path="/" render={(props) => <Smurfs {...props} smurfs={this.state.smurfs} />} />
 
         <Route path="/smurf-form" render={(props) => <SmurfForm {...props} addSmurf={this.addSmurf} />} />
